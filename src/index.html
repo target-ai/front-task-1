@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Target AI - pre-interview task</title>
+</head>
+<body>
+    <script src="./script.js"></script>
+    <script src="./solution.js"></script>
+    <script>
+        const graph = {
+            start: {A: 5, B: 2},
+            A: {C: 4, D: 2},
+            B: {A: 8, D: 7},
+            C: {D: 6, finish: 3},
+            D: {finish: 1},
+            finish: {}
+        };
+        const start = 'start';
+        const finish = 'finish';
+
+        new Finder(solution, graph, start, finish);
+    </script>
+</body>
+</html>
